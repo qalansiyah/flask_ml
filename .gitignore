@@ -1,4 +1,5 @@
 .vercel
+.wsgi
 *.log
 *.pyc
 __pycache__
