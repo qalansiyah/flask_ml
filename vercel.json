@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/Procfile" }
+    { "source": "/app.py", "destination": "/templates/main.html" }
   ]
 }
