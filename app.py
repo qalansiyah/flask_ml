@@ -19,7 +19,7 @@ def main():
     return render_template('main.html', result = y_pred)
 
 
-#if __name__ == '__main__':
-    #with open('lr_model.pkl', 'rb') as f:
-        #loaded_model = pickle.load(f)
-    #app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    with open('lr_model.pkl', 'rb') as f:
+        loaded_model = pickle.load(f)
+    app.run(host='0.0.0.0')
