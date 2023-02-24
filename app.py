@@ -20,4 +20,3 @@ def main():
 if __name__ == '__main__':
     with open('lr_model.pkl', 'rb') as f:
         loaded_model = pickle.load(f)
-    app.run(debug=True)
