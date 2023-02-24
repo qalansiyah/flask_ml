@@ -11,6 +11,8 @@ app = Flask(__name__, template_folder='templates')
 def main():
     y_pred = ''
     if request.method == 'POST':
+        with open('lr_model.pkl', 'rb') as f:
+            loaded_model = pickle.load(f)
         exp = float(request.form['experience'])
         y_pred = loaded_model.predict([[exp]])
         y_pred = abs(y_pred)
@@ -18,5 +20,6 @@ def main():
 
 
 if __name__ == '__main__':
-    with open('lr_model.pkl', 'rb') as f:
-        loaded_model = pickle.load(f)
+    #with open('lr_model.pkl', 'rb') as f:
+        #loaded_model = pickle.load(f)
+    app.run(host='0.0.0.0')
