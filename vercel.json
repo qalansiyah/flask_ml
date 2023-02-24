@@ -1,8 +1,5 @@
 {
-  "routes": [
-    {
-      "src": "/",
-      "dest": "wsgi"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "wsgi" }
   ]
 }
